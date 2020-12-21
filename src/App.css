@@ -5,6 +5,36 @@ body {
   background-color: lightgrey;
   font-family: 'Ubuntu', sans-serif;
 }
+.ajax div:nth-child(odd){
+  background-color: cyan;
+}
+.ajax div:nth-child(even){
+  color: white;
+  background-color: black;
+}
+.ajax {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  margin: 40px;
+}
+.ajax2 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  margin: 40px;
+}
+.ajax2 div:nth-child(odd){
+  background-color: rgb(0, 156, 177);
+}
+.ajax2 div:nth-child(even){
+  color: white;
+  background-color: rgb(23, 32, 28);
+}
+.ajaxname {
+  font-size: 25px;
+  padding: 0;
+}
 .head { 
   display: flex;
   background-color: black;
@@ -58,11 +88,6 @@ h2 {
 }
 
 
-
-/* *{
-  text-align: center;
-  font-family: 'Indie Flower', cursive;
-}
 h3 {
   color: white;
 }
@@ -126,4 +151,4 @@ input{
 .pic{
   width: 100%;
 }
- */
+

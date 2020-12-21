@@ -3,7 +3,7 @@ import '../App.css';
 import i1 from './Img/i1.jpg';
 
 const Footer = () => {
-    return <div style={{textAlign:"left", backgroundColor:"black", position:"fixed", bottom:"0", width:"100%"}}>
+    return <div style={{textAlign:"left", backgroundColor:"black", padding:"10px", bottom:"0", width:"100%"}}>
       <img src={i1} style={{textAlign:"center", float:"left", border:"solid 4px white", borderRadius:"50%", marginTop: "5px"}}/>
       <h2>I am Vakhtangi Iosava, junior front-end developer from Georgia. </h2>
       <h2>Skills: Html, Css, VanillaJs.</h2>

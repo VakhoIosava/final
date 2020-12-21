@@ -1,20 +1,25 @@
 import './App.css';
-// import ImageCarousel from './Components/ImageCarousel';
-// import Posts from './Components/Posts/Post';
+import ImageCarousel from './Components/ImageCarousel';
+import Posts from './Components/Posts/Post';
 import {Link, useHistory, Route, Switch} from 'react-router-dom';
 // import lg from './img/favicon.ico';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import ContactPage from './Components/Contact';
 import AboutPage from './Components/About';
-import MainPage from './Components/MainPage'
+import MainPage from './Components/MainPage';
+import Users from './Components/Users';
+import Reviews from './Components/Reviews';
 
 
 const NavBar = () => {
   return <div class="head" style={{justifyContent: "flex-end"}}>
     <Link to="/">Home</Link>
     <Link to="/contact">Contact</Link>
+    <Link to="/clients">Last Clients</Link>
+    <Link to="/reviews">Reviews</Link>
     <Link to="/about">About us</Link>
+    <Link to="/projects">Projects</Link>
   </div>
 }
 
@@ -27,7 +32,10 @@ function App() {
       <Switch>
         <Route path="/" exact component={MainPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/clients" component={Users} />
+        <Route path="/reviews" component={Reviews} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/projects" component={Posts} />
       </Switch>
       <Footer></Footer>
     </div>

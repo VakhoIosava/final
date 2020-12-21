@@ -2,13 +2,15 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 
 import '.././App.css';
-import ImgComp from './ImgComp';
 import i1 from "./Img/i1.png";
 import i2 from "./Img/i2.jpg";
 import i3 from "./Img/i3.jpg";
 import i4 from "./Img/i4.jpg";
 import i5 from "./Img/i5.jpg";
 import i6 from "./Img/i6.jpg";
+const ImgComp = ({ src }) => {
+    return <img src={src} alt="image" class="pic"></img>
+}
 const ImageCarousel = () => {
     let arrayOfImage = [<ImgComp src={i1}/>,<ImgComp src={i2}/>,<ImgComp src={i3}/>,<ImgComp src={i4}/>,<ImgComp src={i5}/>,<ImgComp src={i6}/>];
     const [x,setX] = useState(0)
