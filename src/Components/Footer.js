@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import '../App.css';
+import i1 from './Img/i1.jpg';
 
 const Footer = () => {
     return <div style={{textAlign:"left", backgroundColor:"black", position:"fixed", bottom:"0", width:"100%"}}>
