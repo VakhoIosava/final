@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom';
 
 const arr1 = [];
 const arr2 = [];
-const Header = (props) => {
+const Headers = (props) => {
     return (
-        <h3>პოსტი - {props.header}</h3>
+        <h3>პოსტი - {props.headers}</h3>
     );
 }
 
@@ -28,7 +27,6 @@ const Poster = () =>{
         <div>{arr1[7]}{arr2[7]}</div>
         <div>{arr1[8]}{arr2[8]}</div>
         <div>{arr1[9]}{arr2[9]}</div>
-        <div>{arr1[10]}{arr2[10]}</div>
         </Fragment>
     )
 }
@@ -47,7 +45,7 @@ export class Posts extends React.Component {
         } 
         else{
             this.setState({ count: this.state.count + 1 })
-            arr1.push(<Header header={this.state.count}/>)
+            arr1.push(<Headers headers={this.state.count}/>)
             arr2.push(<Text text={this.state.count}/>)
             if (this.state.count === 10){
                 this.setState({ count: 0 });
@@ -73,11 +71,15 @@ export class Posts extends React.Component {
     }
     render(){
         return (
-            <div>
-                <button onClick={this.handleMinusClick}>-</button>
-                <input type="text" value={this.state.count}/>
-                <button onClick={this.handlePlusClick}>+</button>
+            <div style={{height:"500px"}}>
+                <div style={{display:"flex", justifyContent:"center"}}>
+                <button className="postbutton" onClick={this.handleMinusClick}>-</button>
+                <input style={{textAlign:"center", margin:"0"}} type="text" value={this.state.count}/>
+                <button className="postbutton" onClick={this.handlePlusClick}>+</button>
+                </div>
+                <div className="postdiv">
                 <Poster />
+                </div>
             </div>
             
         );

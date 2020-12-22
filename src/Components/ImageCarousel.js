@@ -7,7 +7,6 @@ import i4 from "./Img/i4.jpg";
 import i5 from "./Img/i5.jpg";
 import i6 from "./Img/i6.jpg";
 
-
 const ImgComp = ({ src }) => {
     return <img src={src} alt="image" class="pic"></img>
 }
@@ -23,7 +22,9 @@ const ImageCarousel = () => {
         x === -100 * (arrayOfImage.length-1) ? setX(0) : setX(x - 100);
     };
     return(
-        <div className="imgcarrousel">{
+        <div className="imgcarrousel">
+            
+            {
             arrayOfImage.map((img,index)=>{
                 return(
                     <div key={index} className="img" style={{transform:`translateX(${x}%)`}}>

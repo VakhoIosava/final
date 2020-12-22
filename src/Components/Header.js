@@ -7,6 +7,6 @@ const Header = () => {
         <h1 style={{color: "cyan", fontSize: "25px", paddingLeft: "20px"}}>Vakhtangi Iosava- Portfolio</h1>
       </div>
   )
-  }
+}
 
-  export default Header;
+export default Header;

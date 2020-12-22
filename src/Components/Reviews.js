@@ -11,7 +11,7 @@ class Reviews extends Component {
     }
 	}
 	componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/comments?_limit=10')
+    fetch('https://jsonplaceholder.typicode.com/comments?_limit=12')
       .then(response => response.json())
       .then(json => {
 				this.setState({
@@ -37,7 +37,7 @@ class Reviews extends Component {
                         <h4>{Item.name}</h4>
                         <h4 style={{fontStyle:"italic"}}>"{Item.body}"</h4>
                     </div>
-                ))};
+                ))}
 			</div>
         )
         }
